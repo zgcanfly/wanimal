@@ -11,11 +11,10 @@ for url in cf.urls:
 
 	pp=Parespage(html)
 
+	pp.Next_addr()
+	print(pp.next_addr)
 
 
-	# pp.Next_addr()
-	# print(pp.next_addr)
-
-	# pp.Picture_addr()
+# pp.Picture_addr()
 	# picturl=pp.picture_addr
 

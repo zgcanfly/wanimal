@@ -1,4 +1,6 @@
 from scrapy.selector import Selector
+from mongodbconn import Mongodbconn
+
 
 class Parespage():
 	def __init__(self,html):
@@ -10,15 +12,20 @@ class Parespage():
 	def Picture_addr(self):
 		selector = Selector(text=self.html)
 		divs = selector.xpath('//img/@src').extract()
-		for i in divs:
-			if 'jpg' in i:
-				self.picture_addr.append(i)
+		for url in divs:
+			if 'jpg' in url:
+				self.picture_addr.append(url)
+				mg = Mongodbconn()
+				mg.Insertcol2(url)
 	def Next_addr(self):
 		selector = Selector(text=self.html)
 		divs = selector.xpath('//a//@href').extract()
-		for i in divs:
-			if 'wanimal1983' in i:
-				self.next_addr.append(i)
+		for url in divs:
+			if 'wanimal1983' in url:
+				self.next_addr.append(url)
+				mg = Mongodbconn()
+				mg.Insertcol1(url)
+
 
 
 

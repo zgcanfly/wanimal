@@ -1,6 +1,3 @@
-#链接地址
-import pymongo
-import time
 
 class Configs(object):
 	def __init__(self):
