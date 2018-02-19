@@ -13,13 +13,19 @@ class Mongodbconn(object):
 
 	def Insertcol1(self,url):
 		detail1 = {'时间': self.date, 'nexturl': url}
-		self.col1.insert(detail1)
-		print(detail1,"已经存入")
+		try:
+			self.col1.insert(detail1)
+			print(detail1,"已经存入")
+		except:
+			pass
 
 	def Insertcol2(self,url):
 		detail2 = {'时间': self.date, 'picturl': url }
-		self.col1.insert(detail2)
-		print(detail2,"已经存入")
+		try:
+			self.col1.insert(detail2)
+			print(detail2,"已经存入")
+		except:
+			pass
 
 	def Selectdb(self):
 		for item in self.col1.find(no_cursor_timeout=True).batch_size(5):
