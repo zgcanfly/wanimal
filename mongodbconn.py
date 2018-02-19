@@ -6,10 +6,10 @@ class Mongodbconn(object):
 		self.clients = pymongo.MongoClient('106.15.224.237',27017)
 		self.dbname="wanima"
 		self.db=self.clients[self.dbname]
-		self.col1=self.db['detail']
-		self.col2=self.db['viurl']
-		self.col1.ensure_index('ph_url', unique=True)
-		self.col2.ensure_index('title', unique=True)
+		self.col1=self.db['nexturl']
+		self.col2=self.db['picturl']
+		self.col1.ensure_index('nexturl', unique=True)
+		self.col2.ensure_index('picturl', unique=True)
 
 	def Insertcol1(self,url):
 		detail1 = {'时间': self.date, 'nexturl': url}
