@@ -10,6 +10,7 @@ class Parespage():
 
 
 	def Picture_addr(self):
+		print("\n正在解析！")
 		selector = Selector(text=self.html)
 		divs = selector.xpath('//img/@src').extract()
 		for url in divs:
@@ -18,6 +19,7 @@ class Parespage():
 				mg = Mongodbconn()
 				mg.Insertcol2(url)
 	def Next_addr(self):
+		print("\n正在解析！")
 		selector = Selector(text=self.html)
 		divs = selector.xpath('//a//@href').extract()
 		for url in divs:
