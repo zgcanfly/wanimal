@@ -17,7 +17,6 @@ class Mongodbconn(object):
 			self.col1.insert(detail1)
 			print(detail1,"已经存入")
 		except:
-			pass
 			print(detail1,"重复存入")
 
 
@@ -27,7 +26,6 @@ class Mongodbconn(object):
 			self.col2.insert(detail2)
 			print(detail2,"已经存入")
 		except:
-			pass
 			print(detail2,"重复存入")
 
 	def Selectdb(self):

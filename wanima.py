@@ -16,14 +16,3 @@ for url in cf.urls:
 		html=dp.Start_url()
 		pp=Parespage(html)
 		pp.Picture_addr()
-
-
-
-
-	# pp.Picture_addr()
-	# print(pp.next_addr)
-
-
-# pp.Picture_addr()
-	# picturl=pp.picture_addr
-

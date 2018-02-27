@@ -18,6 +18,7 @@ class Parespage():
 				self.picture_addr.append(url)
 				mg = Mongodbconn()
 				mg.Insertcol2(url)
+
 	def Next_addr(self):
 		print("\n正在解析！")
 		selector = Selector(text=self.html)
