@@ -29,5 +29,5 @@ class Mongodbconn(object):
 			print(detail2,"重复存入")
 
 	def Selectdb(self):
-		for item in self.col1.find(no_cursor_timeout=True).batch_size(5):
+		for item in self.col2.find(no_cursor_timeout=True).batch_size(5):
 			return item['nexturl']
