@@ -30,10 +30,8 @@ def down_file(downurl,title):
         request.urlretrieve(downurl, filename, callbackfunc)
     except IOError as e:
         print("exit code:7",e)
-        pass
     except:
         print("exit code: 5 无法下载该文件:",title,"\ndownurl:")
-        pass
 
 
 if __name__=='__main__':
