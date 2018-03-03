@@ -1,7 +1,7 @@
 
 class Configs(object):
 	def __init__(self):
-		self.urls = ['http://wanimal1983.org/archive',
+		self.urls = [
 		'http://wanimal1983.org/archive/2018/01',
 		'http://wanimal1983.org/archive/2018/02',
 		'http://wanimal1983.org/archive/2018/03',
@@ -29,4 +29,16 @@ class Configs(object):
 		'http://wanimal1983.org/archive/2016/10',
 		'http://wanimal1983.org/archive/2016/11',
 		'http://wanimal1983.org/archive/2016/12',
+        'http://wanimal1983.org/archive/2015/01',
+        'http://wanimal1983.org/archive/2015/02',
+        'http://wanimal1983.org/archive/2015/03',
+        'http://wanimal1983.org/archive/2015/04',
+        'http://wanimal1983.org/archive/2015/05',
+        'http://wanimal1983.org/archive/2015/06',
+        'http://wanimal1983.org/archive/2015/07',
+        'http://wanimal1983.org/archive/2015/08',
+        'http://wanimal1983.org/archive/2015/09',
+        'http://wanimal1983.org/archive/2015/10',
+        'http://wanimal1983.org/archive/2015/11',
+        'http://wanimal1983.org/archive/2015/12'
         ]
