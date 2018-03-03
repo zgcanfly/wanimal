@@ -1,6 +1,6 @@
 from urllib import request
 from mongodbconn import Mongodbconn
-import sys,os,threading
+import sys,os
 
 
 def callbackfunc(blocknum, blocksize, totalsize):

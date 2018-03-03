@@ -30,4 +30,4 @@ class Mongodbconn(object):
 
 	def Selectdb(self):
 		for item in self.col2.find(no_cursor_timeout=True).batch_size(5):
-			return item['nexturl']
+			return item['picturl']
