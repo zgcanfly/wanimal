@@ -11,6 +11,7 @@ class Mongodbconn(object):
 		self.col1.ensure_index('nexturl', unique=True)
 		self.col2.ensure_index('picturl', unique=True)
 
+
 	def Insertcol1(self,url):
 		detail1 = {'时间': self.date, 'nexturl': url}
 		try:
@@ -28,6 +29,3 @@ class Mongodbconn(object):
 		except:
 			print(detail2,"重复存入")
 
-	def Selectdb(self):
-		for item in self.col2.find(no_cursor_timeout=True).batch_size(5):
-			return item['picturl']

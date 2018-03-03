@@ -23,26 +23,18 @@ def callbackfunc(blocknum, blocksize, totalsize):
 
 
 def down_file(downurl,title):
-    title=title
+    title=title + ".jpg"
     filename=os.path.basename(title)
-    print("开始下载文件",title)
+    print("开始下载文件",downurl,title)
     try:
         request.urlretrieve(downurl, filename, callbackfunc)
     except IOError as e:
         print("exit code:7",e)
     except:
         print("exit code: 5 无法下载该文件:",title,"\ndownurl:")
-    print("下载成功 开始记录到数据库")
-
-
-
-
-
 
 
 if __name__=='__main__':
     mg = Mongodbconn()
-    picturl = mg.Selectdb()
-    for i in picturl:
-    # 启动线程下载
-        down_file(downurl=i,title=i)
+    for i in mg.col2.find(no_cursor_timeout=True).batch_size(5):
+        down_file(downurl=i['picturl'],title=str(i['_id']))
