@@ -30,7 +30,8 @@
 
 ##### wanima.py:
 
-    入口
+    pip3 install -r requirements.txt
+    
     执行方法: python3  wanima.py
 
 downfiles.py
